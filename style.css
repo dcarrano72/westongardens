@@ -166,3 +166,19 @@ footer {
     padding: 0 20px;
     background-color: #5B8C80;
 }
+
+.footer-box {
+    width: 30%;
+    color: #fff;
+    height: 400px;
+}
+
+.footer-box h3 {
+    margin-bottom: 20px;
+}
+
+.map {
+    width: 100%;
+    height: 300px;
+    background-color: #344e48;
+}
