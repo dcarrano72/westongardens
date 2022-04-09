@@ -197,28 +197,37 @@
                 </div>
 
                 <div class="footer-box">
-                    <form action="" class="yard-calculator">
-                        <h3>Yard Calculator</h3>
-                        <p>
-                            <input type="number" name="area-length" id="area-length" placeholder="Area Length">
-                        </p>
-                        <p>
-                            <input type="number" name="area-width" id="area-width" placeholder="Area Width">
-                        </p>
-                        <p>
-                            <input type="number" name="height" id="height" placeholder="Height">
-                        </p>
-                        <p>
-                            <input type="number" name="total" id="total" placeholder="Total">
-                        </p>
+                    <h3>Yard Calculator</h3>
+                    <form id="yardcalculator" class="yard-calculator">
+                        <input type="number" name="area-length" id="area-length" placeholder="Area Length">
+                        <input type="number" name="area-width" id="area-width" placeholder="Area Width">
+                        <input type="number" name="depth" id="depth" placeholder="Depth in inches"><br>
+                        <button type="button" id="calculate" onclick="calc()">Calculate</button>
                     </form>
 
-                    <p class="results">
+                    <p id="results"></p>
 
                     </p>
                 </div>
     </footer>
 
+    <script>
+        function calc() {
+
+            let l = document.getElementById("area-length").value; //in feet
+            let w = document.getElementById("area-width").value; //in feet
+            let d = document.getElementById("depth").value; //in inches
+
+            l = l / 3;
+            w = w / 3;
+            d = d / 36;
+            let v = l * w * d;
+            let result = Math.ceil(v);
+
+            document.getElementById("results").innerHTML = `You will need ${result} yards of mulch.`;
+            document.getElementById("yardcalculator").reset();
+        }
+    </script>
 </body>
 
 </html>
