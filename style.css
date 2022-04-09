@@ -185,3 +185,8 @@ footer {
     height: 300px;
     background-color: #344e48;
 }
+
+iframe {
+    width: 100%;
+    height: 100%;
+}
