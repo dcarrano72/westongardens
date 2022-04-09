@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Weston Gardens - Premium Mulch</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -202,9 +203,9 @@
                 <div class="footer-box">
                     <h3>Yard Calculator</h3>
                     <form id="yardcalculator" class="yard-calculator">
-                        <input type="number" name="area-length" id="area-length" placeholder="Area Length">
-                        <input type="number" name="area-width" id="area-width" placeholder="Area Width">
-                        <input type="number" name="depth" id="depth" placeholder="Depth in inches"><br>
+                        <input type="number" name="area-length" id="area-length" placeholder="Area Length" required>
+                        <input type="number" name="area-width" id="area-width" placeholder="Area Width" required>
+                        <input type="number" name="depth" id="depth" placeholder="Depth in inches" required><br>
                         <button class="calculate-button" type="button" id="calculate"
                             onclick="calc()">Calculate</button>
                     </form>
